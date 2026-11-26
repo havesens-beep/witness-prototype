@@ -37,12 +37,22 @@ const I = {
 
 /* ---------- 목업 데이터 ---------- */
 const VIDEOS = [
-  { id: 1, time: '18:12:40', place: 'OO사거리', dir: '북→남 방향', device: '전방 블랙박스', type: '블랙박스', q: 'FHD', dur: 45, x: 60, y: 36, dist: 180, scene: '' },
-  { id: 2, time: '18:05:12', place: 'OO사거리 남측 횡단보도', dir: '동→서 방향', device: '후방 블랙박스', type: '블랙박스', q: 'QHD', dur: 60, x: 32, y: 66, dist: 320, scene: 'b' },
-  { id: 3, time: '17:48:03', place: '△△약국 앞', dir: '고정 시점', device: '상가 CCTV', type: 'CCTV', q: 'HD', dur: 120, x: 30, y: 30, dist: 410, scene: 'c' },
-  { id: 4, time: '18:20:55', place: 'OO로 버스정류장', dir: '서→동 방향', device: '전방 블랙박스', type: '블랙박스', q: 'FHD', dur: 38, x: 70, y: 62, dist: 260, scene: 'b' },
-  { id: 5, time: '18:31:10', place: 'OO사거리 편의점 앞', dir: '현장 촬영', device: '휴대폰 촬영', type: '휴대폰', q: '4K', dur: 25, x: 47, y: 56, dist: 90, scene: 'c' },
-  { id: 6, time: '17:22:44', place: '□□아파트 정문', dir: '남→북 방향', device: '전방 블랙박스', type: '블랙박스', q: 'HD', dur: 50, x: 76, y: 24, dist: 470, scene: '' },
+  { id: 1, time: '18:12:40', place: 'OO사거리', dir: '북→남 방향', device: '전방 블랙박스', type: '블랙박스', q: 'FHD', dur: 45, x: 60, y: 36, dist: 180, scene: '', mood: '야간' },
+  { id: 2, time: '18:05:12', place: 'OO사거리 남측 횡단보도', dir: '동→서 방향', device: '후방 블랙박스', type: '블랙박스', q: 'QHD', dur: 60, x: 32, y: 66, dist: 320, scene: 'rain', mood: '비' },
+  { id: 3, time: '17:48:03', place: '△△약국 앞', dir: '고정 시점', device: '상가 CCTV', type: 'CCTV', q: 'HD', dur: 120, x: 30, y: 30, dist: 410, scene: 'cctv', mood: 'CCTV' },
+  { id: 4, time: '18:20:55', place: 'OO로 버스정류장', dir: '서→동 방향', device: '전방 블랙박스', type: '블랙박스', q: 'FHD', dur: 38, x: 70, y: 62, dist: 260, scene: 'neon', mood: '야간' },
+  { id: 5, time: '18:31:10', place: 'OO사거리 편의점 앞', dir: '현장 촬영', device: '휴대폰 촬영', type: '휴대폰', q: '4K', dur: 25, x: 47, y: 56, dist: 90, scene: 'dusk', mood: '노을' },
+  { id: 6, time: '17:22:44', place: '□□아파트 정문', dir: '남→북 방향', device: '전방 블랙박스', type: '블랙박스', q: 'HD', dur: 50, x: 76, y: 24, dist: 470, scene: 'garage', mood: '주차장' },
+  { id: 7, time: '18:02:31', place: 'OO터널 진입부', dir: '서→동 방향', device: '전방 블랙박스', type: '블랙박스', q: 'QHD', dur: 52, x: 18, y: 48, dist: 450, scene: 'tunnel', mood: '터널' },
+  { id: 8, time: '17:56:18', place: 'OO대로 2차로', dir: '남→북 방향', device: '측면 블랙박스', type: '블랙박스', q: 'FHD', dur: 40, x: 54, y: 22, dist: 300, scene: 'dusk', mood: '노을' },
+  { id: 9, time: '18:15:02', place: 'OO사거리 북측 상가', dir: '고정 시점', device: '상가 CCTV', type: 'CCTV', q: 'FHD', dur: 180, x: 62, y: 46, dist: 150, scene: 'cctv', mood: 'CCTV' },
+  { id: 10, time: '18:09:47', place: 'OO사거리 좌회전 차로', dir: '동→북 방향', device: '전방 블랙박스', type: '블랙박스', q: '4K', dur: 33, x: 44, y: 40, dist: 120, scene: 'neon', mood: '야간' },
+  { id: 11, time: '18:40:26', place: 'OO교 북단', dir: '북→남 방향', device: '전방 블랙박스', type: '블랙박스', q: 'FHD', dur: 48, x: 38, y: 78, dist: 390, scene: 'rain', mood: '비' },
+  { id: 12, time: '17:35:10', place: 'OO초 앞 횡단보도', dir: '현장 촬영', device: '휴대폰 촬영', type: '휴대폰', q: 'FHD', dur: 22, x: 24, y: 64, dist: 440, scene: 'day', mood: '주간' },
+  { id: 13, time: '18:26:39', place: 'OO로 주유소 입구', dir: '서→동 방향', device: '후방 블랙박스', type: '블랙박스', q: 'HD', dur: 55, x: 82, y: 58, dist: 480, scene: '', mood: '야간' },
+  { id: 14, time: '18:18:05', place: '대형마트 지하 2층', dir: '고정 시점', device: '주차장 CCTV', type: 'CCTV', q: 'HD', dur: 240, x: 66, y: 30, dist: 380, scene: 'garage', mood: '주차장' },
+  { id: 15, time: '17:51:44', place: 'OO고개 내리막', dir: '북→남 방향', device: '전방 블랙박스', type: '블랙박스', q: 'QHD', dur: 41, x: 86, y: 40, dist: 720, scene: 'snow', mood: '눈' },
+  { id: 16, time: '18:44:12', place: 'OO역 3번 출구', dir: '현장 촬영', device: '휴대폰 촬영', type: '휴대폰', q: '4K', dur: 30, x: 12, y: 20, dist: 860, scene: 'neon', mood: '야간' },
 ].map(v => ({ ...v, price: 10000, cat: '교통사고' }));
 
 const REQUESTS = [
@@ -93,21 +103,22 @@ const condText = () => {
   const d = new Date(S.q.date);
   return `${d.getMonth() + 1}/${d.getDate()} ${S.q.hour - S.q.range}~${S.q.hour + S.q.range}시 · ${S.q.radius}m`;
 };
-const thumb = (v, extra = '') => `<div class="thumb">${extra}<div class="scene ${v.scene}"></div><div class="play">${I.play}</div><span class="dur">${Math.floor(v.dur / 60)}:${String(v.dur % 60).padStart(2, '0')}</span></div>`;
+const thumb = (v, extra = '') => `<div class="thumb">${extra}<div class="scene ${v.scene}"></div><div class="play">${I.play}</div>${v.time ? `<span class="rec">${v.time.slice(0, 5)}</span>` : ''}<span class="dur">${Math.floor(v.dur / 60)}:${String(v.dur % 60).padStart(2, '0')}</span></div>`;
 const durText = s => s >= 60 ? `${Math.floor(s / 60)}분 ${s % 60 ? (s % 60) + '초' : ''}`.trim() : `${s}초`;
 const trustBadges = () => `<span class="tag ok">${I.check}심사 완료</span><span class="tag ok">${I.check}원본 무편집</span><span class="tag">${I.doc}진본 확인서</span>`;
 
 function mapStreets() {
   return `<svg class="streets" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <rect width="400" height="300" fill="#E8EBE4"/>
-    <g fill="#DCE3D5"><rect x="20" y="20" width="110" height="80" rx="6"/><rect x="250" y="20" width="130" height="70" rx="6"/><rect x="30" y="190" width="90" height="90" rx="6"/><rect x="270" y="200" width="110" height="80" rx="6"/></g>
-    <path d="M0 250 C 80 230, 140 270, 230 255 S 360 240, 400 262" stroke="#BFD6E6" stroke-width="16" fill="none"/>
-    <g stroke="#fff" fill="none" stroke-linecap="round">
+    <defs><pattern id="mg" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="rgba(143,125,255,.07)" stroke-width="1"/></pattern></defs>
+    <rect width="400" height="300" fill="#0A0C15"/><rect width="400" height="300" fill="url(#mg)"/>
+    <g fill="#11142A"><rect x="20" y="20" width="110" height="80" rx="6"/><rect x="250" y="20" width="130" height="70" rx="6"/><rect x="30" y="190" width="90" height="90" rx="6"/><rect x="270" y="200" width="110" height="80" rx="6"/></g>
+    <path d="M0 250 C 80 230, 140 270, 230 255 S 360 240, 400 262" stroke="#0F2440" stroke-width="16" fill="none"/>
+    <g stroke="#1E2236" fill="none" stroke-linecap="round">
       <path d="M0 140 H400" stroke-width="18"/><path d="M190 0 V300" stroke-width="18"/>
       <path d="M0 60 L400 100" stroke-width="9"/><path d="M60 0 L110 300" stroke-width="9"/>
       <path d="M300 0 L280 300" stroke-width="9"/><path d="M0 210 H400" stroke-width="7"/>
     </g>
-    <g stroke="#F1C75B" stroke-width="1.5" stroke-dasharray="8 8" fill="none"><path d="M0 140 H400"/><path d="M190 0 V300"/></g>
+    <g stroke="rgba(255,200,110,.55)" stroke-width="1.2" stroke-dasharray="8 8" fill="none"><path d="M0 140 H400"/><path d="M190 0 V300"/></g>
   </svg>`;
 }
 function mapHTML(items, { gift = false, numbered = true, radius = true, ctrl = true } = {}) {
@@ -160,27 +171,94 @@ function render() {
    ========================================================= */
 function home() {
   const hours = Array.from({ length: 24 }, (_, h) => `<option value="${h}" ${h === S.q.hour ? 'selected' : ''}>${String(h).padStart(2, '0')}:00</option>`).join('');
+  const latest = [...VIDEOS].sort((a, b) => b.id - a.id).slice(0, 8);
+  const d = new Date(S.q.date);
+  const words = ['EVIDENCE', '목격', 'WITNESS', '증거', 'TRUST', '진본'];
   return `
-  <section class="hero"><div class="hero-grid">
-    <div>
-      <span class="eyebrow">${I.shield}당사자 인증 · 진본 확인서 · 판매자 익명</span>
-      <h1 class="h1">내 사고 영상,<br>찾아드려요</h1>
-      <p class="lead">현수막·커뮤니티 수소문 없이, 언제·어디서만 입력하면 <br class="pc">근처에서 촬영된 블랙박스·CCTV 영상을 찾아요.</p>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="bokeh" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="road" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+    <div class="hud-corners" aria-hidden="true"></div>
+    <div class="hud" aria-hidden="true">
+      <span class="r">REC&nbsp;&nbsp;${ymd(d)}&nbsp;<span id="hudClock">18:12:40</span></span>
+      <span>N 37.5384° · E 127.0823°&nbsp;&nbsp;|&nbsp;&nbsp;42 km/h</span>
     </div>
-    <form class="card qs" onsubmit="event.preventDefault();quickSearch()">
-      <label class="qs-row">${I.cal}<div class="grow"><div class="lbl">날짜</div><input type="date" id="qDate" value="${S.q.date}"></div></label>
-      <label class="qs-row">${I.clock}<div class="grow"><div class="lbl">시간대</div><select id="qHour">${hours}</select></div>
-        <select id="qRange" class="pill" aria-label="시간 범위"><option value="1">±1시간</option><option value="2">±2시간</option><option value="3">±3시간</option></select></label>
-      <div class="qs-row">${I.pin}<div class="grow"><div class="lbl">위치</div><b id="qLoc">${S.q.loc}</b></div>
-        <select id="qRadius" class="pill" aria-label="반경"><option>300</option><option selected>500</option><option>1000</option></select><span class="small muted">m</span></div>
-      <button class="btn" type="submit">${I.search}영상 찾기</button>
-      <p class="qs-hint">위치·시간은 현재 기준으로 자동 입력됐어요 · 검색은 무료</p>
-    </form>
-  </div></section>
+    <div class="hero-in">
+      <div class="hero-copy">
+        <span class="eyebrow">${I.shield}당사자 인증 · 진본 확인서 · 판매자 익명</span>
+        <div class="display hero-word">WITNESS</div>
+        <h1>내 사고를 찍은 영상,<br><em>가장 빠르고 합법적으로</em> 찾기</h1>
+        <p>현수막·커뮤니티 수소문 없이 언제·어디서만 입력하세요. 블랙박스는 며칠이면 덮어써지니, 지금 근처에서 촬영된 영상을 찾아보세요.</p>
+      </div>
+      <form class="card qs" onsubmit="event.preventDefault();quickSearch()">
+        <div class="qs-head"><b>빠른 검색</b><span class="tag ok">${I.check}검색 무료</span></div>
+        <label class="qs-row">${I.cal}<div class="grow"><div class="lbl">날짜</div><input type="date" id="qDate" value="${S.q.date}"></div></label>
+        <label class="qs-row">${I.clock}<div class="grow"><div class="lbl">시간대</div><select id="qHour">${hours}</select></div>
+          <select id="qRange" class="pill" aria-label="시간 범위"><option value="1">±1시간</option><option value="2">±2시간</option><option value="3">±3시간</option></select></label>
+        <div class="qs-row">${I.pin}<div class="grow"><div class="lbl">위치</div><b id="qLoc">${S.q.loc}</b></div>
+          <select id="qRadius" class="pill" aria-label="반경"><option>300</option><option selected>500</option><option>1000</option></select><span class="small muted">m</span></div>
+        <button class="btn" type="submit">${I.search}영상 찾기</button>
+        <p class="qs-hint">위치·시간은 현재 기준으로 자동 입력됐어요</p>
+      </form>
+    </div>
+  </section>
 
-  <div class="wrap" style="padding-top:8px">
+  <div class="ticker" aria-label="실시간 현황"><div class="ticker-track">
+    ${[0, 1].map(() => `
+      <span><i></i>오늘 등록된 영상 <b>128</b>건</span>
+      <span><i class="v"></i>심사 완료 <b>96</b>건</span>
+      <span><i class="a"></i>진행 중인 목격 요청 <b>34</b>건</span>
+      <span><i></i>평균 매칭 <b>2.4</b>일</span>
+      <span><i class="v"></i>내 주변 500m 새 영상 <b>${VIDEOS.filter(v => v.dist <= 500).length}</b>건</span>
+      <span><i class="a"></i>이번 주 판매자 정산 <b>₩3,872,000</b></span>`).join('')}
+  </div></div>
+
+  <div class="wrap">
     <section class="sec">
-      <div class="sec-h"><h2>내 주변 목격 요청</h2><a href="#/requests">더보기 ›</a></div>
+      <div class="sec-h"><div><div class="kicker">Latest footage</div><h2>방금 등록된 영상</h2></div><a href="#/search">전체 보기 ›</a></div>
+      <div class="gallery">
+        ${latest.map(v => `<button class="gcard" onclick="go('/video/${v.id}')">
+          <div class="frame"><div class="scene ${v.scene}"></div>
+            <div class="ov"><div class="top"><span class="r">REC ${v.time}</span><span>${v.q}</span></div>
+              <div class="bot"><span class="pv">${I.play}2초 미리보기</span><span class="tag ok" style="font-size:11px">${I.check}심사 완료</span></div></div></div>
+          <div class="meta"><b>${v.place}</b><div class="row"><span>${v.device} · ${v.mood} · ${v.dist}m</span><span class="price">${won(v.price)}</span></div></div>
+        </button>`).join('')}
+      </div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-h"><div><div class="kicker">How it works</div><h2>세 단계면 증거가 손에</h2></div></div>
+      <div class="steps">
+        <div class="card stepc"><div class="art search"></div><span class="no">01 / 03</span><div class="word">Search.</div><b>언제·어디서로 찾기</b><p>날짜·시간대와 지도 반경으로 근처 영상을 찾고, 2초 블러 미리보기로 내 사고인지 확인해요.</p></div>
+        <div class="card stepc"><div class="art verify"></div><span class="no">02 / 03</span><div class="word">Verify.</div><b>사건 당사자 인증</b><p>사고접수번호·보험 접수번호·서류 중 하나로 당사자임을 인증해요. 원본은 인증된 사람만 구매해요.</p></div>
+        <div class="card stepc"><div class="art evidence"></div><span class="no">03 / 03</span><div class="word">Evidence.</div><b>원본 + 진본 확인서</b><p>고유 워터마크가 들어간 원본과 해시값이 적힌 진본 확인서 PDF를 받아요.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="marquee" aria-hidden="true"><div>${[...words, ...words].map(w => `<span>${w}</span>`).join('')}</div></div>
+
+  <div class="wrap">
+    <section class="sec" style="margin-top:24px">
+      <div class="stackwrap"><div class="stack-grid">
+        <div class="stack" aria-hidden="true">
+          <div class="s"><div class="scene neon"></div><span>DASHCAM · FRONT</span></div>
+          <div class="s"><div class="scene cctv"></div><span>CCTV · FIXED</span></div>
+          <div class="s"><div class="scene dusk"></div><span>PHONE · 4K</span></div>
+        </div>
+        <div class="stack-copy">
+          <div class="kicker">Every angle</div>
+          <h3>블랙박스, CCTV, 휴대폰까지<br>한 사건을 여러 각도로</h3>
+          <p>같은 시각, 같은 장소를 찍은 영상을 기기별로 모아 보여드려요. 전방·후방·측면 블랙박스와 상가·주차장 CCTV, 현장 휴대폰 촬영본을 비교해 가장 결정적인 장면을 고르세요.</p>
+          <a class="btn sm light" href="#/search">${I.search}내 주변 영상 보기</a>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="sec">
+      <div class="sec-h"><div><div class="kicker">Nearby requests</div><h2>내 주변 목격 요청</h2></div><a href="#/requests">더보기 ›</a></div>
       <div class="hscroll">
         ${REQUESTS.map(r => `<a class="card req-card" href="#/request/${r.id}">
           <div class="badges">${r.bounty ? `<span class="tag gift">${I.gift}현상금 ${r.bounty / 10000}만원</span>` : '<span class="tag">요청</span>'}</div>
@@ -189,24 +267,25 @@ function home() {
     </section>
 
     <section class="sec">
-      <div class="card upsell">
+      <div class="upsell">
         <div class="ic">${I.cam}</div>
-        <div><b>목격한 영상이 있나요?</b><p>올리기만 하면 판매·정산 자동, 판매자 정보는 비공개</p></div>
-        <a class="btn" href="#/upload">영상 올리고 수익 받기</a>
+        <div class="grow" style="min-width:220px"><b>목격한 영상이 있나요?</b><p>올리기만 하면 판매·정산 자동. 판매자 정보는 구매자에게 공개되지 않아요.</p></div>
+        <div><div class="small muted">피해자·가해자·보험사 2곳이 사면</div><div class="earnbig">₩35,200</div></div>
+        <a class="btn light" href="#/upload">${I.plus}영상 올리고 수익 받기</a>
       </div>
     </section>
 
     <section class="sec">
-      <div class="sec-h"><h2>이용 방법</h2></div>
-      <ol class="how">
-        <li class="card"><div><b>언제·어디서 검색</b><p>날짜·시간대와 지도 반경으로 근처 영상을 찾아요. 2초 블러 미리보기로 내 사고인지 확인해요.</p></div></li>
-        <li class="card"><div><b>당사자 인증</b><p>사고접수번호·보험 접수번호·서류 중 하나로 사건 당사자임을 인증해요.</p></div></li>
-        <li class="card"><div><b>원본 + 진본 확인서</b><p>결제 후 고유 워터마크가 들어간 원본과 해시값이 적힌 확인서를 받아요.</p></div></li>
-      </ol>
+      <div class="stats">
+        <div><b>12<small>%</small></b><span>마켓 수수료 · 나머지는 판매자 몫</span></div>
+        <div><b>2<small>초</small></b><span>블러 미리보기로 먼저 확인</span></div>
+        <div><b>30<small>일</small></b><span>원본 다운로드 기한</span></div>
+        <div><b>7<small>일</small></b><span>구매 확정 후 판매자 정산</span></div>
+      </div>
     </section>
 
     <section class="sec">
-      <div class="sec-h"><h2>믿을 수 있는 이유</h2></div>
+      <div class="sec-h"><div><div class="kicker">Trust by design</div><h2>믿을 수 있는 이유</h2></div></div>
       <div class="trust">
         <div class="card">${I.shield}<b>2단계 심사</b><p>AI 1차 + 운영자 2차 심사 후 공개</p></div>
         <div class="card">${I.eyeoff}<b>자동 블러</b><p>얼굴·번호판은 미리보기에서 가려져요</p></div>
@@ -215,10 +294,18 @@ function home() {
       </div>
     </section>
   </div>
-  <footer class="foot">위트니스는 증거 확보 목적의 영상만 거래합니다 · 조회수·인기순 정렬은 제공하지 않습니다<br>
+  <footer class="foot"><div class="display">WITNESS</div>위트니스는 증거 확보 목적의 영상만 거래합니다 · 조회수·인기순 정렬은 제공하지 않습니다<br>
     <a href="#/leak">유출 신고 센터</a> · 고객센터 · 이용약관 · 개인정보처리방침</footer>`;
 }
-home.after = () => { $('#qRange').value = S.q.range; };
+let hudT;
+home.after = () => {
+  $('#qRange').value = S.q.range;
+  clearInterval(hudT); let s = 18 * 3600 + 12 * 60 + 40;
+  hudT = setInterval(() => {
+    const el = $('#hudClock'); if (!el) return clearInterval(hudT);
+    s++; el.textContent = [Math.floor(s / 3600), Math.floor(s / 60) % 60, s % 60].map(n => String(n).padStart(2, '0')).join(':');
+  }, 1000);
+};
 function quickSearch() {
   S.q.date = $('#qDate').value; S.q.hour = +$('#qHour').value; S.q.range = +$('#qRange').value; S.q.radius = +$('#qRadius').value;
   S.sel = null; go('/search');
@@ -333,11 +420,11 @@ function video(id) {
     <div class="detail">
       <div class="stage" id="stage">
         <div class="scene ${v.scene}"></div>
-        <span class="priv">${I.eyeoff}얼굴·번호판 블러</span>
+        <span class="priv">${I.eyeoff}얼굴·번호판 블러</span><span class="shud">REC ${v.time} · ${v.q}</span>
         <button class="cover" onclick="playPreview()" aria-label="2초 미리보기 재생"><span class="pb">${I.play}</span><small>2초 미리보기 (블러)</small></button>
         <div class="bar"></div>
         <div class="end"><b>미리보기가 끝났어요</b><span>원본은 인증된 사건 당사자만 구매할 수 있어요</span>
-          <button class="btn sm" style="background:#fff;color:var(--ink);margin-top:6px" onclick="playPreview()">다시 보기</button></div>
+          <button class="btn sm light" style="margin-top:6px" onclick="playPreview()">다시 보기</button></div>
       </div>
       <div>
         <div class="when">${ymd(d)} ${v.time}</div>
@@ -359,7 +446,7 @@ function video(id) {
     </div>
     <aside class="card aside-buy">
       <div class="small muted">영상 1건</div>
-      <div style="font-size:28px;font-weight:800;margin:2px 0 14px">${won(v.price)}</div>
+      <div class="price-big">${won(v.price)}</div>
       <ul class="contract" style="padding:0 0 16px">
         <li>${I.shield}당사자 인증 후 구매</li><li>${I.dl}워터마크 원본 + 진본 확인서 PDF</li><li>${I.clock}다운로드 기한 30일</li>
       </ul>
