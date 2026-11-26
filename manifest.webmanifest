@@ -1,0 +1,12 @@
+{
+  "name": "위트니스 — 목격영상 마켓",
+  "short_name": "위트니스",
+  "start_url": "./#/",
+  "display": "standalone",
+  "background_color": "#F5F4F0",
+  "theme_color": "#10243E",
+  "lang": "ko",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
